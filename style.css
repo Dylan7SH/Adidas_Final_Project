@@ -115,7 +115,7 @@ nav ul.nav-links li a {
     color: #ffffff;
 }
 
-.prodcut-card {
+.product-card {
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
@@ -125,8 +125,18 @@ nav ul.nav-links li a {
     max-width: 600px;
 }
 
-/* Game Play  */
+.product-card img {
+    width: 100%;
+    border-radius: 6px;
+}
 
+/* Game Play  */
+.game-controls {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
 
 
 
