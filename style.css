@@ -1,3 +1,8 @@
+/* Dylan Scott-Hickling 
+GIT 417
+juNE 2025 */
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -102,7 +107,7 @@ nav ul.nav-links li a {
 }
 
 #product-buttons button {
-    padding: 0.5rem 1 rem;
+    padding: 0.5rem 1rem;
     font-weight: bold;
     border: 2px solid #111;
     background: none;
@@ -146,6 +151,10 @@ form {
     max-width: 600px;
 }
 
+fieldset label {
+    margin-bottom: 0.25rem;
+}
+
 .form-group, fieldset {
     display: flex;
     flex-direction: column;
@@ -186,4 +195,13 @@ button[type="submit"]:hover {
     padding: 1rem;
     border-radius: 4px;
 }
+
 /* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+}
