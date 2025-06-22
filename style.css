@@ -30,6 +30,7 @@ body.dark {
     align-items: center;
 }
 
+/* Nav */
 nav ul.nav-links {
     display: flex;
     gap: 1rem;
@@ -91,3 +92,21 @@ nav ul.nav-links li a {
 .theme-toggle input:checked + .slider {
     background-color: #333;
 }
+
+/* Product Display */
+
+
+
+
+/* Game Play  */
+
+
+
+
+
+/* Contact Form  */
+
+
+
+
+/* Footer */
