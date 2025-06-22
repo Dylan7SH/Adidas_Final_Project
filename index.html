@@ -75,11 +75,20 @@
 
                     <fieldset class="form-group">
                         <legend>Preferrred Contact Method*</legend>
-                        <label><input type="radio" name="contactMethod" value="email">Email</label>
-                        <label><input type="radio" name="contactMethod" value="phone">Phone</label>
+                        <label><input type="radio" name="contactMethod" value="email"> Email</label>
+                        <label><input type="radio" name="contactMethod" value="phone"> Phone</label>
                         <span class="error" id="contactMethodError"></span>
                     </fieldset>
+
+                    <div class="form-group">
+                        <label for="comments">Comments*</label>
+                        <textarea id="comments" name="comments" required></textarea>
+                        <span class="error" id="commentsError"></span>
+                    </div>
+
+                    <button type="submit">Submit</button>
                 </form>
+                <div id="submissionMessage"></div>
             </section>
         </main>
     </body>
