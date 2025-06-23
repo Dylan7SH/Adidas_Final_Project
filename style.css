@@ -151,6 +151,12 @@ form {
     max-width: 600px;
 }
 
+label[for]::after {
+    content:attr(data-required);
+    color: red;
+    margin-left: 0.25rem;
+    font-weight: bold;
+}
 fieldset label {
     margin-bottom: 0.25rem;
 }

@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         guessInput.value = "";
         gameResult.textContent = "";
     });
-
+    /* Contact Form */
     let contactForm = document.getElementById("contactForm");
     contactForm.addEventListener("submit", function(event) {
         event.preventDefault();

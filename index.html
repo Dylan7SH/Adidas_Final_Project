@@ -56,7 +56,7 @@
                 <h2>Contact Us</h2>
                 <form id="contactForm" novalidate>
                     <div class="form-group">
-                        <label for="fullName">Full Name*</label>
+                        <label for="fullName" data-required="*">Full Name*</label>
                         <input type="text" id="fullName" name="fullName" required>
                         <span class="error" id="nameError"></span>
                     </div>
@@ -81,7 +81,7 @@
                     </fieldset>
 
                     <div class="form-group">
-                        <label for="comments">Comments*</label>
+                        <label for="comments" data-required="*">Comments*</label>
                         <textarea id="comments" name="comments" required></textarea>
                         <span class="error" id="commentsError"></span>
                     </div>
