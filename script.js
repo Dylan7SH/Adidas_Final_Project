@@ -1,6 +1,6 @@
 /* Dylan Scott-Hickling 
 GIT 417
-juNE 2025 */
+June 2025 */
 
 "use strict";
 
