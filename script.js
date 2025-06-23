@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", fucntion() {
         document.body.classList.toggle("dark");
     });
 
+    /* Product Display */
+
     let products = [
         {
             name: "Ultraboost 1.0",
@@ -51,5 +53,20 @@ document.addEventListener("DOMContentLoaded", fucntion() {
 
     displayProduct(0);
 
+    /* Game Play */
+
+    let guessInput = document.getElementById("guessInput");
+    let guessBtn = document.getElementById("guessBtn");
+    let guessResult = document.getElementById("gameResult");
+
+    guessBtn.addEventListener("click", fucntion() {
+        let userGuess = parseInt(guessInput.value);
+        let randomNum = Math.floor(Math.random() * 10) + 1;
+        if (userGuess === randomNum) {
+            gameResult.textContent = `You guessed it! The number was ${randomNum}.`;
+        }else{
+            gameResult.textContent = `Try again! You guess ${userGuess}, but the number was ${randomNum}.`;
+        }
+    });
     
 });
