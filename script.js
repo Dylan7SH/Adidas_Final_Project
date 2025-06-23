@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let nameError = document.getElementById("nameError");
         let emailError = document.getElementById("emailError");
         let phoneError = document.getElementById("phoneError");
-        let commentsError = document.getElementById("commentError");
+        let commentsError = document.getElementById("commentsError");
         let contactMethodError = document.getElementById("contactMethodError");
         let submissionMessage = document.getElementById("submissionMessage");
 
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 preferredContact: contactMethod.value   
             };
 
-            contactForm.requestFullscreen();
+            contactForm.reset();
             submissionMessage.innerHTML = `<strong>Thank you, ${customer.fullName}!</strong><br>We will contact via ${customer.preferredContact}.<br>Message: "${customer.comments}"`;
         }
     });
