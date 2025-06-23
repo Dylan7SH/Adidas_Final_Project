@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let email = document.getElementById("email").value.trim();
         let phone = document.getElementById("phone").value.trim();
         let comments = document.getElementById("comments").value.trim();
-        let contactMethod = document.querySelector("input[name=`contactMethod`]:checked");
+        let contactMethod = document.querySelector("input[name='contactMethod']:checked");
 
         let nameError = document.getElementById("nameError");
         let emailError = document.getElementById("emailError");
@@ -124,10 +124,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!hasError) {
             let customer = {
-                fullName: fullName,
-                email: email,
-                phone: phone,
-                comments: comments,
+                fullName,
+                email,
+                phone,
+                comments,
                 preferredContact: contactMethod.value   
             };
 
