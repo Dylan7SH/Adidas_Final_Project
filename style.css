@@ -54,6 +54,7 @@ nav ul.nav-links li a {
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
+    padding: 2rem 0;
 }
 
 /* Banner */
@@ -62,8 +63,11 @@ nav ul.nav-links li a {
 }
 
 .hero-image {
-    max-width: 600px;
+    max-width: 100%;
     width: 100%;
+    height: auto;
+    object-fit: cover;
+    min-height: 400px;
     border-radius: 10px;
 }
 
