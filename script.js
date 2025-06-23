@@ -4,9 +4,9 @@ juNE 2025 */
 
 "use strict";
 
-document.addEventListener("DOMContentLoaded", fucntion() {
+document.addEventListener("DOMContentLoaded", function() {
     let toggle = document.getElementById("themeToggle");
-    toggle.addEventListener("change", fucntion() {
+    toggle.addEventListener("change", function() {
         document.body.classList.toggle("dark");
     });
 
@@ -115,5 +115,18 @@ document.addEventListener("DOMContentLoaded", fucntion() {
             phoneError.textContent = "Enter a 10-digit phone number.";
             hasError = true;
         }
-    })
+
+        if (!hasError) {
+            let customer = {
+                fullName: fullName,
+                email: email,
+                phone: phone,
+                comments: comments,
+                preferredContact: contactMethod.value   
+            };
+
+            contactForm.requestFullscreen();
+            submissionMessage.innerHTML = `<strong>Thank you, ${customer.fullName}!</strong><br>We will contact via ${customer.preferredContact}.<br>Message: "${customer.comments}"`;
+        }
+    });
 });
