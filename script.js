@@ -68,5 +68,52 @@ document.addEventListener("DOMContentLoaded", fucntion() {
             gameResult.textContent = `Try again! You guess ${userGuess}, but the number was ${randomNum}.`;
         }
     });
-    
+
+    let contactForm = document.getElementById("contactForm");
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let fullName = document.getElementById("fullName").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let comments = document.getElementById("comments").value.trim();
+        let contactMethod = document.querySelector("input[name=`contactMethod`]:checked");
+
+        let nameError = document.getElementById("nameError");
+        let emailError = document.getElementById("emailError");
+        let phoneError = document.getElementById("phoneError");
+        let commentsError = document.getElementById("commentError");
+        let contactMethodError = document.getElementById("contactMethodError");
+        let submissionMessage = document.getElementById("submissionMessage");
+
+        nameError.textContent = "";
+        emailError.textContent = "";
+        phoneError.textContent = "";
+        commentsError.textContent = "";
+        contactMethodError.textContent = "";
+        submissionMessage.textContent = "";
+
+        let hasError = false;
+
+        if (fullName === "") {
+            nameError.textContent = "Full name is required.";
+            hasError = true;
+        }
+
+        if (comments === "") {
+            commentsError.textContent = "Comments are required.";
+            hasError = true;
+        }
+
+        if (!contactMethod) {
+            contactMethodError.textContent = "Please select a contact method.";
+            hasError = true;
+        }else if (contactMethod.value === "email" && !/^\S+@\S+\.\S+$/.test(email)) {
+            emailError.textContent = "Enter a valid email address.";
+            hasError = true;
+        }else if (contactMethod.value === "phone" && !/^\d{10}$/.test(phone)) {
+            phoneError.textContent = "Enter a 10-digit phone number.";
+            hasError = true;
+        }
+    })
 });
