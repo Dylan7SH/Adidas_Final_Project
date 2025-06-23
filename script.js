@@ -31,4 +31,25 @@ document.addEventListener("DOMContentLoaded", fucntion() {
             description: "Carry your gear in style with this durable and water-resistant backpack."
         }
     ];
+
+    let productButtons = document.getElementById("product-buttons");
+    let productDisplay = document.getElementById("product-display");
+
+    fucntion displayProduct(index) {
+        let product = products[index];
+        productDisplay.innerHTML = `<h3>${product.name}</h3><img src="${product.image}" alt="${product.name}"><p>${product.description}</p>`;
+    }
+
+    products.forEach(function(product, index) {
+        let btn = document.createElement("button");
+        btn.textContent = product.name;
+        btn.addEventListener("click", fucntion() {
+            displayProduct(index);
+        });
+        productButtons.appendChild(btn);
+    });
+
+    displayProduct(0);
+
+    
 });
