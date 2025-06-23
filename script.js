@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let productButtons = document.getElementById("product-buttons");
     let productDisplay = document.getElementById("product-display");
 
-    fucntion displayProduct(index) {
+    function displayProduct(index) {
         let product = products[index];
         productDisplay.innerHTML = `<h3>${product.name}</h3><img src="${product.image}" alt="${product.name}"><p>${product.description}</p>`;
     }
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     products.forEach(function(product, index) {
         let btn = document.createElement("button");
         btn.textContent = product.name;
-        btn.addEventListener("click", fucntion() {
+        btn.addEventListener("click", function() {
             displayProduct(index);
         });
         productButtons.appendChild(btn);
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let guessBtn = document.getElementById("guessBtn");
     let guessResult = document.getElementById("gameResult");
 
-    guessBtn.addEventListener("click", fucntion() {
+    guessBtn.addEventListener("click", function() {
         let userGuess = parseInt(guessInput.value);
         let randomNum = Math.floor(Math.random() * 10) + 1;
         if (userGuess === randomNum) {
