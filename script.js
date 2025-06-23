@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let guessInput = document.getElementById("guessInput");
     let guessBtn = document.getElementById("guessBtn");
+    let resetGuessBtn = document.getElementById("resetGuessBtn");
     let guessResult = document.getElementById("gameResult");
 
     guessBtn.addEventListener("click", function() {
@@ -67,6 +68,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }else{
             gameResult.textContent = `Try again! You guess ${userGuess}, but the number was ${randomNum}.`;
         }
+    });
+
+    resetGuessBtn.addEventListener("click", function() {
+        guessInput.value = "";
+        gameResult.textContent = "";
     });
 
     let contactForm = document.getElementById("contactForm");
