@@ -35,6 +35,14 @@ body.dark {
     align-items: center;
 }
 
+#logo {
+    transition: filter 0.3s ease-in-out;
+}
+
+body.dark #logo {
+    filter: invert(100%);
+}
+
 /* Nav */
 nav ul.nav-links {
     display: flex;
@@ -147,7 +155,7 @@ section {
 }
 
 /* Product Display */
-#product-section {
+#products-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,6 +206,26 @@ section {
     gap: 1rem;
     margin: 1rem 0;
     flex-wrap: wrap;
+}
+#guessBtn, #resetGuessBtn {
+    background-color: #111;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+#guessBtn:hover, #resetGuessBtn:hover {
+    background-color: #333;
+}
+
+body.dark #guessBtn, body.dark #resetGuesdBtn {
+    background-color: #ffffff;
+    color: #111;
+}
+
+body.dark #guessBtn:hover, body.dark #resetGuesdBtn:hover {
+    background-color: #ddd;
 }
 
 /* Contact Form  */
